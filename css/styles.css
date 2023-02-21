@@ -1,0 +1,61 @@
+:root{
+    /*Colores*/
+    --bitcoin-orange: #F7931A;
+    --soft-orange: #FFE9D4;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black: #201E1C;
+    --black: #282623;
+    --grey: #BABABA;
+    --off-white: #FAF8F7;
+    --just-white: #FFF;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.main__container{
+    width: 920px;
+    height: 700px;
+    background-color: #1A9AF7;
+}
+
+.main__container--section{
+    /* width: 200px; */
+}
+
+.section--img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size:cover;
+}
+
+/* .main__container {
+    background-image: url('../assets/imgs/Bitcoin.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+/*  .header--tittle-container h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;/*Dimension entre lineas
+    color: var(--just-white);
+} */
+
+
+/* 
+.left a {
+    text-decoration: none;
+    color: var(--just-white);
+} */
