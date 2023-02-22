@@ -1,5 +1,5 @@
-:root{
-    /*Colores*/
+/* :root{
+
     --bitcoin-orange: #F7931A;
     --soft-orange: #FFE9D4;
     --secondary-blue: #1A9AF7;
@@ -22,14 +22,28 @@ html{
     font-family: 'Raleway', sans-serif;
 }
 
-.main__container{
-    width: 920px;
-    height: 700px;
+body{
+    font-size: 1.4rem;
+} */
+
+/* Main size of the page */
+/* .main__container{
+    width: 90%;
+    height: auto;
+} */
+
+/* .nav{
+    display: flex;
     background-color: #1A9AF7;
+    justify-content:space-around;
+    align-items: center;
+} */
+
+/* .nav__logo{
+    background-color: var(--grey);
 }
 
 .main__container--section{
-    /* width: 200px; */
 }
 
 .section--img{
@@ -37,7 +51,7 @@ html{
     height: 100%;
     background-position: center;
     background-size:cover;
-}
+} */
 
 /* .main__container {
     background-image: url('../assets/imgs/Bitcoin.svg');
