@@ -22,11 +22,56 @@ html{
     font-family: 'Raleway', sans-serif;
 }
 
+body{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+/* Main width of the page */
+
 .main__container{
-    width: 920px;
-    height: 700px;
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+/* Nav section begins */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E7F5FF;
+    height: 45px;
+}
+
+.nav__logo{
+    margin: auto;
     background-color: #1A9AF7;
 }
+
+.nav__btns{
+    display: flex;
+    justify-content: space-around;
+    padding: 3px;
+    width: 50%;
+}
+
+.li__btns{
+    list-style: none;
+    margin: 7px;
+    padding: 5px;
+}
+
+.li_a__btns{
+    text-decoration: none;
+    color: #201E1C;
+}
+
+.li_a__btns:hover{
+    text-decoration: underline;
+    font-size: 2.2rem;
+}
+
 
 .main__container--section{
     /* width: 200px; */
@@ -37,7 +82,7 @@ html{
     height: 100%;
     background-position: center;
     background-size:cover;
-}
+} 
 
 /* .main__container {
     background-image: url('../assets/imgs/Bitcoin.svg');
@@ -46,7 +91,7 @@ html{
     background-repeat: no-repeat;
 } */
 
-/*  .header--tittle-container h1 {
+ /* .header--tittle-container h1 {
     font-size: 2.4rem;
     font-weight: bold;
     line-height: 2.6rem;/*Dimension entre lineas
