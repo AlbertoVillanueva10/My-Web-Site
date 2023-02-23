@@ -34,32 +34,46 @@ body{
     margin: auto;
 }
 
-/* Nav section begins */
+/* Navbar section begins */
 
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #E7F5FF;
-    height: 45px;
+    background-color: #f4f4f4;
+    height: 100px;
 }
 
 .nav__logo{
     margin: auto;
-    background-color: #1A9AF7;
+    background-position: center;
+    background-size:cover;
+    width: 150px;
+    height: 100%;
+}
+
+.nav__logo:hover{
+    cursor: pointer;
 }
 
 .nav__btns{
     display: flex;
     justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
     padding: 3px;
-    width: 50%;
+    width: 60%;
+    height: 100%;
+    text-align: center;
+
 }
 
 .li__btns{
     list-style: none;
-    margin: 7px;
-    padding: 5px;
+    padding: 10px 5px 0px 5px;
+    width: 120px;
+    height: 50px;
+    /* padding: 5px; */
 }
 
 .li_a__btns{
@@ -69,12 +83,28 @@ body{
 
 .li_a__btns:hover{
     text-decoration: underline;
-    font-size: 2.2rem;
+    font-size: 1.9rem;
+    font-weight: bold;
 }
 
+/* Main section begins */
 
-.main__container--section{
-    /* width: 200px; */
+.main {
+    position: relative;
+}
+.main__section--img{
+    width: 100%;
+    background-color: #1A9AF7;
+    position: absolute;
+}
+
+.main__section--p{
+    position: absolute;
+    z-index: 1;
+    top: auto;
+    left: auto;
+    font-size: 3.5rem;
+    font-weight: bold;
 }
 
 .section--img{
@@ -83,24 +113,3 @@ body{
     background-position: center;
     background-size:cover;
 } 
-
-/* .main__container {
-    background-image: url('../assets/imgs/Bitcoin.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-} */
-
- /* .header--tittle-container h1 {
-    font-size: 2.4rem;
-    font-weight: bold;
-    line-height: 2.6rem;/*Dimension entre lineas
-    color: var(--just-white);
-} */
-
-
-/* 
-.left a {
-    text-decoration: none;
-    color: var(--just-white);
-} */
