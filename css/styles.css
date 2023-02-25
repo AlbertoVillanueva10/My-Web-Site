@@ -51,7 +51,7 @@ hero is created by these next 2 classes, hero and hero::before*/
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(../images/computer.jpg);
+    background-image: linear-gradient(100deg, #7777778c 10%, #0000008c 75%), url(../images/computer.jpg);
     background-size: cover;
     /* clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 95%, 0 95%);
     z-index: -1; */
@@ -61,22 +61,23 @@ hero is created by these next 2 classes, hero and hero::before*/
 
 .nav {
     --padding-container: 0;
+    /* max-width: 1000px; */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     /* background-color: #f4f4f4; */
     width: 100%;
     position: relative;
-    top: 0;
+    /* top: 0; */
+    /* margin: 0 auto; */
 }
 
 .nav__logo{
-    margin: auto;
+    /* margin: auto; */
     background-position: center;
     background-size:cover;
-    width: 150px;
+    width: 100px;
     height: 100%;
-    opacity: .9;
 }
 
 .nav__logo:hover{
@@ -106,15 +107,15 @@ hero is created by these next 2 classes, hero and hero::before*/
 .li_a__btns{
     text-decoration: none;
     color: var(--color-btns-nav);
-    font-size: 1.9rem;
-    opacity: .7;
+    font-size: 2.0rem;
+    opacity: .85;
 }
 
 .li_a__btns:hover{
     text-decoration: underline;
-    font-size: 2.0rem;
+    font-size: 2.3rem;
     font-weight: bold;
-    transition: 7ms;
+    transition: .3s;
     opacity: 1;
 }
 
@@ -132,10 +133,12 @@ hero is created by these next 2 classes, hero and hero::before*/
 .hero-text--name{
     font-size: 4.5rem;
     font-weight: bold;
-    opacity: .9;
+    opacity: .85;
 }
 
 .hero-text--role{
     font-size: 3.0rem;
+    font-weight: bold;
+    opacity: .85;
 
 }
