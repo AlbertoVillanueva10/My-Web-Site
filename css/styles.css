@@ -1,8 +1,10 @@
 :root{
     /*Colores*/
-    --bitcoin-orange: #F7931A;
-    --padding-container: 100px 0;
     --color-btns-nav: #f4f4f4;
+    --color-sections-container: #BFDCE5;
+    --color-footer-container: #3E54AC;
+    --padding-container: 100px 0;
+    
 }
 
 *{
@@ -141,4 +143,47 @@ hero is created by these next 2 classes, hero and hero::before*/
     font-weight: bold;
     opacity: .85;
 
+}
+
+/* Main */
+
+.main{
+    /* min-height: 600px;
+    max-height: 800px; */
+    padding: 50px 0;
+}
+
+/* About me section beggins */
+.subtitle{
+    display:flex;
+    justify-content: center;
+    margin: 0 50px;
+    font-size: 3.5rem;
+}
+
+.sub-container{
+    --padding-container: 50px 0;
+    background-color: var(--color-sections-container);
+}
+.about-me{
+    background-color: #3E54AC;
+}
+
+.about-me--img-text{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    min-height: 400px;
+}
+
+.about-me--img{
+    background-image: url(../images/my_picture.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10%;
+}
+
+.footer{
+    
+    background-color: var(--color-footer-container);
 }
