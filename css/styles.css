@@ -75,11 +75,11 @@ hero is created by these next 2 classes, hero and hero::before*/
 }
 
 .nav__logo{
-    /* margin: auto; */
+    margin-top: 5px;
     background-position: center;
     background-size:cover;
-    width: 100px;
-    height: 100%;
+    width: 160px;
+    /* height: 100%; */
 }
 
 .nav__logo:hover{
