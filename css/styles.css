@@ -4,6 +4,9 @@
     --color-sections-container: #BFDCE5;
     --color-footer-container: #3E54AC;
     --padding-container: 100px 0;
+    /* size links */
+    /* size letter containers */
+    --size-letter-containers:2.5rem;
     
 }
 
@@ -21,6 +24,7 @@ html{
 body{
     font-size: 1.8rem;
     font-weight: bold;
+    background-color: var(--color-btns-nav);
 }
 /* Main width of the page  - container*/
 
@@ -55,6 +59,7 @@ hero is created by these next 2 classes, hero and hero::before*/
     height: 100%;
     background-image: linear-gradient(100deg, #7777778c 10%, #0000008c 75%), url(../images/computer.jpg);
     background-size: cover;
+    border-radius: 0px 0px 25px 15px;
     /* clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 95%, 0 95%);
     z-index: -1; */
 }
@@ -150,20 +155,26 @@ hero is created by these next 2 classes, hero and hero::before*/
 .main{
     /* min-height: 600px;
     max-height: 800px; */
-    padding: 50px 0;
+    background-color: var(--color-btns-nav);
+    padding: 0 0;
 }
 
 /* About me section beggins */
+
+/* These are the subtitles*/
 .subtitle{
     display:flex;
     justify-content: center;
-    margin: 0 50px;
-    font-size: 3.5rem;
+    margin: 25px 0px;
+    font-size: 4.0rem;
+    color: black;
+    opacity: .75;
 }
 
 .sub-container{
     --padding-container: 50px 0;
     background-color: var(--color-sections-container);
+    border-radius: 3%;
 }
 .about-me{
     background-color: #3E54AC;
@@ -173,6 +184,10 @@ hero is created by these next 2 classes, hero and hero::before*/
     display: grid;
     grid-template-columns: 1fr 2fr;
     min-height: 400px;
+    max-height: 600px;
+    padding: 5px;
+    font-size: var(--size-letter-containers);
+    font-weight: 300;
 }
 
 .about-me--img{
@@ -180,7 +195,34 @@ hero is created by these next 2 classes, hero and hero::before*/
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 10%;
+    border-radius: 50%;
+}
+
+.about-me--text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 10px 10px 35px;
+    text-align: center;
+
+}
+
+/* Skills section */
+.skills__section{
+    --padding-container: 0px;
+    background-color: red;
+    display: flex;
+}
+
+.single-skill__section{
+    width: 100%;
+}
+
+.skill--img{
+    background-image: url(/images/skills/html5.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
 }
 
 .footer{
