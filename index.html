@@ -10,19 +10,30 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <title>Web Site</title>
+    <script src="./main.js"></script>
 </head>
 <body class="">
+    <div class="menu-open">
+        <div class="links-menu-open">
+            <a href="#home">Home</a>
+            <a href="#home">Home</a>
+            <a href="#home">Home</a>
+            <a href="#home">Home</a>
+        </div>
+    </div>
     <!-- Hero image -->
-    <header class="hero">
+    <header id="home" class="hero">
         <nav class="nav container">
             <a class="nav__logo" href="#"><img class="nav__logo" src="./images/my-logo.svg" alt="Logo"></a>
             <ul class="nav__btns">
-                <li class="li__btns"><a class="li_a__btns" href="#">Home</a></li>
+                <li class="li__btns"><a class="li_a__btns" href="#home">Home</a></li>
                 <li class="li__btns"><a class="li_a__btns" href="#about-me">About me</a></li>
                 <li class="li__btns"><a class="li_a__btns" href="#skills">Skills</a></li>
-                <li class="li__btns"><a class="li_a__btns" href="#">Projects</a></li>
+                <li class="li__btns"><a class="li_a__btns" href="#portafolio">Portafolio</a></li>
                 <li class="li__btns"><a class="li_a__btns" href="#">Contact</a></li>
             </ul>
+            <!-- Hamburguer menu-->
+            <a class="ham-menu" href="#"><img class="ham__menu--icon" src="./images/icons/menu-alt-right-regular-24.png" alt=""></a>
         </nav>
         <!-- text over hero -->
         <div class="hero-text">
@@ -70,29 +81,42 @@
                 </article>
             </div>
         </section>
-        <section class="portafolio container">
-            <div class="single__project">
-                <h3 class="single__project-tittle">Google Clone</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, deserunt corrupti, autem libero minus rem laboriosam culpa sint omnis quidem atque consequuntur officiis. Vero quasi similique facilis maiores neque ipsa.</p>
-            </div>
-            <div class="single__project">
-                <h3 class="single__project-tittle">Data bit</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, deserunt corrupti, autem libero minus rem laboriosam culpa sint omnis quidem atque consequuntur officiis. Vero quasi similique facilis maiores neque ipsa.</p>
-            </div>
-            <div class="single__project">
-                <h3 class="single__project-tittle">Matrices JS</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, deserunt corrupti, autem libero minus rem laboriosam culpa sint omnis quidem atque consequuntur officiis. Vero quasi similique facilis maiores neque ipsa.</p>
-            </div>
-            <div class="single__project">
-                <h3 class="single__project-tittle">HTML y CSS Responsive</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, deserunt corrupti, autem libero minus rem laboriosam culpa sint omnis quidem atque consequuntur officiis. Vero quasi similique facilis maiores neque ipsa.</p>
+        <h2 id="portafolio" class="subtitle">Portafolio</h2>
+        <section class="sub-container">
+            <div class="portafolio container">
+                <a class="carousel-arrow" href="#"><img class="" src="./images/icons/bx-arrow-left.svg" alt=""></a>
+                <article class="single__project">
+                    <img class="single__project-img" src="./images/skills/html5.png" alt="">
+                    <figure class="single__project-subtitle">MYSQL</figure>
+                </article>
+                <div class="single__project ">
+                    <article class="single-project__section">
+                        <img class="single__project-img" src="./images/skills/mysql.png" alt="">
+                        <figure class="single__project-subtitle">MYSQL</figure>
+                    </article>
+                </div>
+                <div class="single__project ">
+                    <article class="single-project__section">
+                        <img class="single__project-img" src="./images/skills/mysql.png" alt="">
+                        <figure class="single__project-subtitle">MYSQL</figure>
+                    </article>
+                </div>
+                <a class="carousel-arrow" href="#"><img src="./images/icons/bx-arrow-right.svg" alt=""></a>
             </div>
         </section>
     </main>
-    <footer class="container footer">
-        <a href="#" class="footer__links"><img src="./images/icons/bxl-github.svg" alt=""></a>
-        <a href="#" class="footer__links"><img src="./images/icons/bxl-linkedin-square.svg" alt=""></a>
-        <a href="#" class="footer__links"><img src="./images/icons/bxl-facebook-square.svg" alt=""></a>
+    <footer class="footer sub-container">
+        <div class="container footer__container">
+            <div class="footer--email">
+                <span class=""><i>alberto.villanueva.rios@gmail.com</i></span>
+            </div>
+            <div class="footer--icons">
+                <a href="#" class="footer__links"><img src="./images/icons/bxl-github.svg" alt=""></a>
+                <a href="#" class="footer__links"><img src="./images/icons/bxl-facebook-square.svg" alt=""></a>
+                <a href="#" class="footer__links"><img src="./images/icons/bxl-linkedin-square.svg" alt=""></a>
+            </div>
+            <span class="copyright">Alberto Villanueva Copyright © <script>document.write(new Date().getFullYear())</script></span>
+        </div>
     </footer>
 </body>
 </html>

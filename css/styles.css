@@ -1,13 +1,13 @@
 :root{
     /*Colores*/
-    --color-btns-nav: #f4f4f4;
-    --color-sections-container: #BFDCE5;
-    --color-footer-container: #3E54AC;
+    /* --color-btns-nav: #f4f4f4; */
+    --color-btns-nav: #f2fdff;
+    --color-sections-container: #9ad4d6;
+    --color-footer-container: #101935;
     --padding-container: 100px 0;
     /* size links */
     /* size letter containers */
     --size-letter-containers:2.5rem;
-    
 }
 
 *{
@@ -102,8 +102,41 @@ hero is created by these next 2 classes, hero and hero::before*/
     width: 60%;
     height: 100%;
     text-align: center;
-
 }
+
+.ham-menu{
+    display: none;
+}
+
+.links-menu-open{
+    display: none;
+}
+
+@media (max-width:1330px) {
+    .nav__btns{
+        display: none;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-around;
+    }
+    .ham-menu{
+        width: 6.5rem;
+        display: flex;
+        justify-content: center;
+    }
+    .ham__menu--icon{
+        color: var(--color-btns-nav);
+        width: 4.5rem;
+    }
+    .ham__menu--icon:hover{
+        border: 1px solid var(--color-btns-nav);
+        transition: .5s;
+        width: 5.5rem;
+    }
+    
+}
+
 
 .li__btns{
     list-style: none;
@@ -169,8 +202,7 @@ hero is created by these next 2 classes, hero and hero::before*/
     justify-content: center;
     margin: 65px 0px 25px 0px;
     font-size: 4.0rem;
-    color: black;
-    opacity: .75;
+    color: var(--color-footer-container);
     text-decoration-line: underline;
 }
 
@@ -207,6 +239,7 @@ hero is created by these next 2 classes, hero and hero::before*/
     justify-content: center;
     padding: 10px 10px 10px 35px;
     text-align: center;
+    color: var(--color-btns-nav);
 
 }
 
@@ -263,6 +296,7 @@ hero is created by these next 2 classes, hero and hero::before*/
 .single__skill-subtitle{
     text-align: center;
     font-weight: 700;
+    color: var(--color-btns-nav);
 }
 
 @media (max-width:1100px) {
@@ -292,7 +326,66 @@ hero is created by these next 2 classes, hero and hero::before*/
     }  */
 }
 
+
+.portafolio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-arrow{
+
+}
+
+.carousel-arrow img{
+    width: 5.5rem;
+    height: 5.5rem;
+}
+
+.single__project{
+    width: 450px;
+}
+
+.single__project-img{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+
+}
+
+.single__project-subtitle{
+    text-align: center;
+    color: var(--color-btns-nav);
+}
+
 .footer{
-    
     background-color: var(--color-footer-container);
+}
+
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer--email{
+    color: var(--color-btns-nav);
+    font-size: 2.5rem;
+    border-bottom: 1px solid var(--color-btns-nav);
+    line-height: 7.5rem;
+}
+
+.footer--icons{
+    margin-top: 2.5rem;
+}
+
+.footer__links img{
+    width: 4.5rem;
+}
+
+.copyright{
+    font-size: 2.0rem;
+    color: var(--color-btns-nav);
 }
