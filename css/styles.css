@@ -19,6 +19,7 @@
 html{
     font-size: 62.5%;
     font-family: 'Poppins', 'Raleway' sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -26,6 +27,7 @@ body{
     font-weight: bold;
     background-color: var(--color-btns-nav);
 }
+
 /* Main width of the page  - container*/
 
 .container{
@@ -208,6 +210,24 @@ hero is created by these next 2 classes, hero and hero::before*/
 
 }
 
+@media (max-width:800px) {
+    .about-me--img-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-me--img{
+        min-width: 250px;
+        min-height: 250px;
+        margin-bottom: 2.5rem;
+        /* display: inline-block; */
+    }
+    .about-me--text{
+        padding: 0;
+    }
+}
+
 /* Skills section */
 .skills__section{
     /* --padding-container: 0px; */
@@ -232,17 +252,44 @@ hero is created by these next 2 classes, hero and hero::before*/
     background-repeat: no-repeat;
     width: 100%;
     height: 150px;
-    border: 1px dotted black;
 }
 
 .single-skill__section{
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .single__skill-subtitle{
-    border: 1px dotted black;
     text-align: center;
     font-weight: 700;
+}
+
+@media (max-width:1100px) {
+    .skills__section{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+        justify-content: center;
+        align-items: center;
+        /* justify-content: center;
+        align-items: center; */
+    }
+    .skill__properties-img{
+        width: fit-content;
+        align-self: center;
+        justify-self: center;
+
+    }
+
+    /* .about-me--img{
+        min-width: 250px;
+        min-height: 250px;
+        margin-bottom: 2.5rem;
+        /* display: inline-block; */
+    /*}
+     .about-me--text{
+        padding: 0;
+    }  */
 }
 
 .footer{
