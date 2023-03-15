@@ -2,7 +2,7 @@
     /*Colores*/
     /* --color-btns-nav: #f4f4f4; */
     --color-btns-nav: #f2fdff;
-    --color-sections-container: #9ad4d6;
+    --color-sections-container: ##e5e5f7;
     --color-footer-container: #101935;
     --padding-container: 100px 0;
     /* size links */
@@ -25,7 +25,7 @@ html{
 body{
     font-size: 1.8rem;
     font-weight: bold;
-    background-color: var(--color-btns-nav);
+    background-color: white;
 }
 
 /* Main width of the page  - container*/
@@ -58,12 +58,12 @@ hero is created by these next 2 classes, hero and hero::before*/
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-image: linear-gradient(100deg, #7777778c 10%, #0000008c 75%), url(../images/computer.jpg);
     background-size: cover;
     border-radius: 0px 0px 25px 15px;
-    /* clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 95%, 0 95%);
-    z-index: -1; */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0 80%);
+    /* z-index: -1; */
 }
 
 /* Navbar section begins */
@@ -72,13 +72,14 @@ hero is created by these next 2 classes, hero and hero::before*/
     --padding-container: 0;
     /* max-width: 1000px; */
     display: flex;
+
     justify-content: space-evenly;
     align-items: center;
     /* background-color: #f4f4f4; */
     width: 100%;
     position: relative;
-    /* top: 0; */
-    /* margin: 0 auto; */
+    margin: 10px auto;
+    height: 100px;
 }
 
 .nav__logo{
@@ -99,44 +100,47 @@ hero is created by these next 2 classes, hero and hero::before*/
     align-content: center;
     flex-wrap: wrap;
     padding: 3px;
-    width: 60%;
+    width: 70%;
     height: 100%;
     text-align: center;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .ham-menu{
     display: none;
 }
 
-.links-menu-open{
+.menu-open{
+    width: 100%;
     display: none;
 }
 
-@media (max-width:1330px) {
-    .nav__btns{
-        display: none;
-    }
-    .nav{
-        display: flex;
-        justify-content: space-around;
-    }
-    .ham-menu{
-        width: 6.5rem;
-        display: flex;
-        justify-content: center;
-    }
-    .ham__menu--icon{
-        color: var(--color-btns-nav);
-        width: 4.5rem;
-    }
-    .ham__menu--icon:hover{
-        border: 1px solid var(--color-btns-nav);
-        transition: .5s;
-        width: 5.5rem;
-    }
-    
+/*Showing hamburguer menu*/
+
+.links-menu-open{
+    /* display: none; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    line-height: 4.5rem;
+    right: 0;
+    width: 100%;
+    align-items: center;
 }
 
+.links-menu-open a{
+    text-decoration: none;
+    color: var(--color-btns-nav);
+    font-size: 5.5rem;
+}
+
+
+
+.underline_subtitle{
+    display: flex;
+    justify-content: center;
+}
 
 .li__btns{
     list-style: none;
@@ -151,13 +155,15 @@ hero is created by these next 2 classes, hero and hero::before*/
     color: var(--color-btns-nav);
     font-size: 2.0rem;
     opacity: .85;
+    padding-bottom: 5px;
 }
 
 .li_a__btns:hover{
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    box-shadow: 0px 3px 0px var(--color-btns-nav);
+    transition: .25s;
     font-size: 2.3rem;
     font-weight: bold;
-    transition: .3s;
     opacity: 1;
 }
 
@@ -190,7 +196,7 @@ hero is created by these next 2 classes, hero and hero::before*/
 .main{
     /* min-height: 600px;
     max-height: 800px; */
-    background-color: var(--color-btns-nav);
+    background-color: white;
     padding: 0 0;
 }
 
@@ -203,12 +209,20 @@ hero is created by these next 2 classes, hero and hero::before*/
     margin: 65px 0px 25px 0px;
     font-size: 4.0rem;
     color: var(--color-footer-container);
-    text-decoration-line: underline;
+    /* padding-bottom: 15px; */
+
+}
+
+/* Box Shadow to simulate a border bottom */
+.subtitle:hover{
+    box-shadow: 0px 3px 0px var(--color-footer-container);
+    transition: .25s;
 }
 
 .sub-container{
     --padding-container: 50px 0;
-    background-color: var(--color-sections-container);
+    background-image: linear-gradient(150deg, #CAC7BC 50%, black 125%);
+    /* background-color: #CAC7BC; */
     /* border-radius: 3%; */
 }
 .about-me{
@@ -243,31 +257,15 @@ hero is created by these next 2 classes, hero and hero::before*/
 
 }
 
-@media (max-width:800px) {
-    .about-me--img-text{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .about-me--img{
-        min-width: 250px;
-        min-height: 250px;
-        margin-bottom: 2.5rem;
-        /* display: inline-block; */
-    }
-    .about-me--text{
-        padding: 0;
-    }
-}
-
 /* Skills section */
 .skills__section{
     /* --padding-container: 0px; */
     /* border: 1px solid black; */
-    display: flex;
-    background-position: center;
-    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-rows: repeat(auto-fit,minmax(300px,2fr));
+    /* background-position: center;
+    background-size: cover; */
 }
 
 /* .single-skill__section{
@@ -298,34 +296,6 @@ hero is created by these next 2 classes, hero and hero::before*/
     font-weight: 700;
     color: var(--color-btns-nav);
 }
-
-@media (max-width:1100px) {
-    .skills__section{
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-        justify-content: center;
-        align-items: center;
-        /* justify-content: center;
-        align-items: center; */
-    }
-    .skill__properties-img{
-        width: fit-content;
-        align-self: center;
-        justify-self: center;
-
-    }
-
-    /* .about-me--img{
-        min-width: 250px;
-        min-height: 250px;
-        margin-bottom: 2.5rem;
-        /* display: inline-block; */
-    /*}
-     .about-me--text{
-        padding: 0;
-    }  */
-}
-
 
 .portafolio{
     display: flex;
@@ -360,8 +330,8 @@ hero is created by these next 2 classes, hero and hero::before*/
     color: var(--color-btns-nav);
 }
 
-.footer{
-    background-color: var(--color-footer-container);
+footer{
+    background-image: linear-gradient(10deg, #101935 30%, white 190%);
 }
 
 .footer__container{
@@ -389,3 +359,116 @@ hero is created by these next 2 classes, hero and hero::before*/
     font-size: 2.0rem;
     color: var(--color-btns-nav);
 }
+
+
+/* Media Queries start */
+
+/* Mobile */
+@media (max-width:768px) {
+    body{
+        background-color: blue;
+    }
+    .nav__btns{
+        display: none;
+    }
+
+}
+
+/* Tablet */
+@media (min-width:769px) {
+    body{
+        background-color: red;
+        height: 100%;
+    }
+    .hero::before{
+        clip-path:polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    }
+    .about-me--img-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-me--img{
+        min-width: 250px;
+        min-height: 250px;
+        margin-bottom: 2.5rem;
+        /* display: inline-block;  */
+    }
+    .about-me--text{
+        padding: 0;
+    }
+    .skills__section{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+        grid-template-rows: repeat(auto-fit,minmax(300px,1fr));
+        /* justify-content: center;
+        align-items: center; */
+    }
+    .skill__properties-img{
+        /* width: fit-content; */
+        width: 70%;
+        height: 50%;
+        align-self: center;
+        justify-self: center;
+
+    }
+    .single-skill__section {
+        padding: 25px 0px;
+    }
+    .portafolio{
+        background-color: orange;
+    }
+    .subtitle{
+        margin: 20px;
+    }
+    .underline_subtitle{
+        display: flex;
+        height: 100%;
+    }
+}
+
+/* Desktop */
+@media (min-width:1000px) {
+    body{
+        background-color: green;
+    }
+    .ham-menu{
+        width: 6.5rem;
+        display: none;
+        justify-content: center;
+    }
+    .ham__menu--icon{
+        color: var(--color-btns-nav);
+        width: 4.5rem;
+    }
+    .ham__menu--icon:hover{
+        border: 1px solid var(--color-btns-nav);
+        transition: .5s;
+        width: 5.5rem;
+    }
+    .container{
+        height: 100%;
+    }
+    .skills__section{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+        background-color: green;
+        /* height: 100vh; */
+    }
+
+     .single-skill__section{
+        display: flex;
+        padding: 0;
+        margin: 0;
+        background-color: red;
+    } 
+
+    .skill__properties-img{
+        width: 80%;
+        height: 80%;
+        background-color: yellow;
+    }
+
+}
+
