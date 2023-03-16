@@ -58,7 +58,7 @@ hero is created by these next 2 classes, hero and hero::before*/
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-image: linear-gradient(100deg, #7777778c 10%, #0000008c 75%), url(../images/computer.jpg);
     background-size: cover;
     border-radius: 0px 0px 25px 15px;
@@ -226,7 +226,7 @@ hero is created by these next 2 classes, hero and hero::before*/
     /* border-radius: 3%; */
 }
 .about-me{
-    background-color: #3E54AC;
+    /* background-color: #3E54AC; */
 }
 
 .about-me--img-text{
@@ -256,6 +256,7 @@ hero is created by these next 2 classes, hero and hero::before*/
     color: var(--color-btns-nav);
 
 }
+
 
 /* Skills section */
 .skills__section{
@@ -365,21 +366,62 @@ footer{
 
 /* Mobile */
 @media (max-width:768px) {
-    body{
-        background-color: blue;
-    }
+
     .nav__btns{
         display: none;
+    }
+
+    .sub-container{
+        background-color: red;
+        padding: 50px 0;
+    } 
+
+    .about-me--img-text{
+        display: flex;
+        flex-direction: column;
+        /* padding: 50px 0px; */
+        min-height: 100%;
+    }
+    .about-me--img{
+        min-width: 250px;
+        min-height: 250px;
+        margin-bottom: 2.5rem;
+        /* display: inline-block;  */
+    }
+    .about-me--text{
+        padding: 0;
+    }
+
+    article.single-skill__section{
+        height: fit-content;
+        padding: 15px;
+    }
+
+    .skills__section.container{
+        display: flex;
+        flex-direction: column;
+    }
+    .single-skill__section {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .skill__properties-img {
+        width: 50%;
+        height: 100%;
+        border: .5px solid black;
+        /* object-fit: fill; */
     }
 
 }
 
 /* Tablet */
 @media (min-width:769px) {
-    body{
-        background-color: red;
-        height: 100%;
+    .container{
+        padding: 0;
     }
+
     .hero::before{
         clip-path:polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
     }
@@ -400,24 +442,30 @@ footer{
     }
     .skills__section{
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-        grid-template-rows: repeat(auto-fit,minmax(300px,1fr));
-        /* justify-content: center;
-        align-items: center; */
+        grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+        /* background-color: red; */
+        object-fit: fill;
+        /* height: 100vh; */
     }
-    .skill__properties-img{
-        /* width: fit-content; */
-        width: 70%;
-        height: 50%;
-        align-self: center;
-        justify-self: center;
 
+    .skills__section.container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
     .single-skill__section {
-        padding: 25px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
+    .skill__properties-img {
+        width: 70%;
+        height: 70%;
+        object-fit: fill;
+    }
+
     .portafolio{
-        background-color: orange;
+        
     }
     .subtitle{
         margin: 20px;
@@ -447,28 +495,49 @@ footer{
         transition: .5s;
         width: 5.5rem;
     }
-    .container{
-        height: 100%;
+
+    .about-me--img-text{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        min-height: 400px;
+        max-height: 600px;
+        padding-top: 30px;
+        font-size: var(--size-letter-containers);
+        font-weight: 300;
     }
+    
+    .about-me--img{
+        max-width:100%;
+        height: 90%;
+        padding: var(--padding-container);
+    }
+
     .skills__section{
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
-        background-color: green;
+        grid-template-columns: repeat(auto-fit,minmax(350px,2fr));
         /* height: 100vh; */
     }
 
+    .skills__section.container{
+        /* background-color: #3E54AC; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
      .single-skill__section{
-        display: flex;
+        /* display: flex; */
         padding: 0;
         margin: 0;
-        background-color: red;
     } 
 
     .skill__properties-img{
-        width: 80%;
-        height: 80%;
-        background-color: yellow;
+        /* width: 50%;
+        height: 70%; */
+        object-fit: fill;
     }
 
 }
 
+.single-skill__section #react{
+    
+}
