@@ -1,5 +1,10 @@
 :root{
     /*Colores*/
+    /* img computer colors */
+    --color-1: #CAC7BC;
+    --color-2: #0F1010;
+    --color-3: #8C7653;
+    --color-4: #6C564B;
     /* --color-btns-nav: #f4f4f4; */
     --color-btns-nav: #f2fdff;
     --color-sections-container: ##e5e5f7;
@@ -61,6 +66,7 @@ hero is created by these next 2 classes, hero and hero::before*/
     height: 100%;
     background-image: linear-gradient(100deg, #7777778c 10%, #0000008c 75%), url(../images/computer.jpg);
     background-size: cover;
+    background-position: center;
     border-radius: 0px 0px 25px 15px;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0 80%);
     /* z-index: -1; */
@@ -118,8 +124,8 @@ hero is created by these next 2 classes, hero and hero::before*/
 
 /*Showing hamburguer menu*/
 
-.links-menu-open{
-    /* display: none; */
+/* .links-menu-open{
+    display: none; 
     position: relative;
     display: flex;
     flex-direction: column;
@@ -133,7 +139,7 @@ hero is created by these next 2 classes, hero and hero::before*/
     text-decoration: none;
     color: var(--color-btns-nav);
     font-size: 5.5rem;
-}
+} */
 
 
 
@@ -219,9 +225,12 @@ hero is created by these next 2 classes, hero and hero::before*/
     transition: .25s;
 }
 
+section.sub-container{
+}
+
 .sub-container{
     --padding-container: 50px 0;
-    background-image: linear-gradient(150deg, #CAC7BC 50%, black 125%);
+    background-image: linear-gradient(110deg, #CAC7BC 60%, black 125%);
     /* background-color: #CAC7BC; */
     /* border-radius: 3%; */
 }
@@ -346,6 +355,8 @@ footer{
     font-size: 2.5rem;
     border-bottom: 1px solid var(--color-btns-nav);
     line-height: 7.5rem;
+    display: flex;
+    justify-content: space-around;
 }
 
 .footer--icons{
@@ -356,9 +367,25 @@ footer{
     width: 4.5rem;
 }
 
+
+.container__copyright{
+    margin-top: 20px;
+    background-color: #6C564B;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.logo--white{
+    width: 200px;
+    height: 200px;
+}
+
 .copyright{
-    font-size: 2.0rem;
+    font-size: 1.7rem;
     color: var(--color-btns-nav);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
@@ -366,27 +393,93 @@ footer{
 
 /* Mobile */
 @media (max-width:768px) {
+    .container{
+        padding: 0;
+    }
+    .hero::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(100deg, #7777778c 10%, #0000008c 75%), url(../images/computer.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 0px 0px 25px 15px;
+        clip-path:polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+        /* z-index: -1; */
+    }
+    
+    .nav__logo{
+        display: none;
+    }
 
     .nav__btns{
         display: none;
     }
 
+    .hero-text{
+        display: none;
+    }
+
+    .links-menu-open{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /* justify-content: center; */
+        /* align-content: space-between; */
+        /* align-items: center; */
+        height: 100%;
+        clip-path:polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+        background-color: #cac7bca8;
+    }
+
+    .menu-open__link{
+        padding: 50px;
+    }
+
+    .links__p--open{
+        color: var(--color-btns-nav);
+        font-size: 3.0rem;
+    }
+
+    .links__p--open:hover{
+        display: inline;
+        cursor: pointer;
+        color: var(--color-btns-nav);
+        box-shadow: 0px 3px 0px var(--color-btns-nav);
+        transition: .25s;
+    }
+
     .sub-container{
-        background-color: red;
+        /* background-color: red; */
         padding: 50px 0;
     } 
+
+    .subtitle{
+        margin: 20px;
+    }
 
     .about-me--img-text{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         /* padding: 50px 0px; */
-        min-height: 100%;
+        /* min-height: 100%; */
     }
     .about-me--img{
-        min-width: 250px;
+        width: 250px;
         min-height: 250px;
         margin-bottom: 2.5rem;
         /* display: inline-block;  */
+        background-color: blue;
     }
     .about-me--text{
         padding: 0;
@@ -479,7 +572,6 @@ footer{
 /* Desktop */
 @media (min-width:1000px) {
     body{
-        background-color: green;
     }
     .ham-menu{
         width: 6.5rem;
