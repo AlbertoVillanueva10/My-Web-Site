@@ -117,9 +117,18 @@ hero is created by these next 2 classes, hero and hero::before*/
     display: none;
 }
 
+ .menu-x{
+    /* display: none;  */
+}
+
 .menu-open{
     width: 100%;
     display: none;
+}
+
+.hidden{
+    display: none;
+    background-color: green;
 }
 
 /*Showing hamburguer menu*/
@@ -396,6 +405,51 @@ footer{
     .container{
         padding: 0;
     }
+    .nav{
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ham-menu{
+        width: 6.5rem;
+        display: block;
+        justify-content: center;
+    }
+    .ham__menu--icon{
+        color: var(--color-btns-nav);
+        width: 4.5rem;
+    }
+    .ham__menu--icon:hover{
+        border: 1px solid var(--color-btns-nav);
+        transition: .5s;
+        width: 5.5rem;
+    }
+
+    .menu-x{
+        /* position: absolute; */
+        /* z-index: 2; */
+        /* display: block; */
+        justify-content: center;
+        width: 3.5rem;
+        height: 3.5rem;
+        background-image: url(/images/icons/bx-x.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .menu__x--icon{
+        color: var(--color-btns-nav);
+        width: 4.5rem;
+    }
+
+    .menu__x--icon:hover{
+        border: 1px solid var(--color-btns-nav);
+        transition: .5s;
+        width: 5.5rem;
+    }
+
     .hero::before{
         content: "";
         position: absolute;
@@ -413,7 +467,7 @@ footer{
     }
     
     .nav__logo{
-        display: none;
+        /* display: none; */
     }
 
     .nav__btns{
@@ -572,20 +626,6 @@ footer{
 /* Desktop */
 @media (min-width:1000px) {
     body{
-    }
-    .ham-menu{
-        width: 6.5rem;
-        display: none;
-        justify-content: center;
-    }
-    .ham__menu--icon{
-        color: var(--color-btns-nav);
-        width: 4.5rem;
-    }
-    .ham__menu--icon:hover{
-        border: 1px solid var(--color-btns-nav);
-        transition: .5s;
-        width: 5.5rem;
     }
 
     .about-me--img-text{
