@@ -16,7 +16,7 @@
     <!-- Hero image -->
     <header id="home" class="hero">
         <nav class="nav container">
-            <a class="nav__logo" href="#"><img class="nav__logo" src="./images/Developer.png" alt="Logo"></a>
+            <a id="navLogo" class="nav__logo" href="#home"></a>
             <ul class="nav__btns">
                 <li class="li__btns"><a class="li_a__btns" href="#home">Home</a></li>
                 <li class="li__btns"><a class="li_a__btns" href="#about-me">About me</a></li>
@@ -25,12 +25,12 @@
                 <li class="li__btns"><a class="li_a__btns" href="#contact">Contact</a></li>
             </ul>
             <!-- Hamburguer menu-->
-            <a class="ham-menu" href="#"><img class="ham__menu--icon" src="./images/icons/menu-alt-right-regular-24.png" alt=""></a>
-            <a class="menu-x hidden" href="#"><img class="menu__x--icon hidden" src="images/icons/bx-x.svg" alt=""></a>
+            <a id="hamMenuID" class="ham-menu" href="#"></a>
+            <!-- <a class="menu-x hidden" href="#"></a> -->
             <!-- <a class="menu-x hidden" href="#"></a> -->
         </nav>
-        <!-- Menu when the ham is open -->
-        <div class="links-menu-open">
+        <!-- Menu when the ham is open, adding a class with toggle -->
+        <div id="linksMenuOpen" class="hidden">
             <a class="menu-open__link" href="#home"><p class="links__p--open">Home</p></a>
             <a class="menu-open__link" href="#about-me"><p class="links__p--open">About me</p></a>
             <a class="menu-open__link" href="#skills"><p class="links__p--open">Skills</p></a>
@@ -116,19 +116,18 @@
     <footer id="contact" class="footer">
         <div class="container footer__container">
             <div class="footer--email">
-                <span class=""><i>alberto.villanueva.rios@gmail.com</i></span>
+                <div class="footer--icons">
+                    <a href="#" class="footer__links"><img src="images/icons/bx-envelope.svg" alt="icon-email"></a>
+                    <a href="#" class="footer__links"><img src="./images/icons/bxl-github.svg" alt="icon-git-hub"></a>
+                    <a href="#" class="footer__links"><img src="./images/icons/bxl-facebook-square.svg" alt="icon-facebook"></a>
+                    <a href="#" class="footer__links"><img src="./images/icons/bxl-linkedin-square.svg" alt="icon-linkedin"></a>
+                </div>
                 <div class="logo_in_footer">
                     <a href="#home">
-                        <img class="logo--white" src="images/my_logo-white.png" alt="logo_in_footer">
+                        <img class="logo--white" src="images/my_logo--white.png" alt="logo_in_footer">
                     </a>
     
                 </div>
-            </div>
-            <div class="footer--icons">
-                <a href="#" class="footer__links"><img src="images/icons/bx-envelope.svg" alt="icon-email"></a>
-                <a href="#" class="footer__links"><img src="./images/icons/bxl-github.svg" alt="icon-git-hub"></a>
-                <a href="#" class="footer__links"><img src="./images/icons/bxl-facebook-square.svg" alt="icon-facebook"></a>
-                <a href="#" class="footer__links"><img src="./images/icons/bxl-linkedin-square.svg" alt="icon-linkedin"></a>
             </div>
         </div>
         <div class="">
@@ -138,6 +137,6 @@
         </div>
     </footer>
     <script src="https://kit.fontawesome.com/450d854036.js" crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
