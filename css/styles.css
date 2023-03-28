@@ -94,7 +94,7 @@ hero is created by these next 2 classes, hero and hero::before*/
 
 .nav__logo{
     margin-top: 5px;
-    background-image: url(/images/my_logo--white.png);
+    background-image: url(../images/my_logo--white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -439,7 +439,7 @@ footer{
 
     .nav__logo{
         margin-top: 5px;
-        background-image: url(/images/my_logo--white.png);
+        background-image: url(../images/my_logo--white.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -450,7 +450,7 @@ footer{
 
     .nav__logo--black{
         margin-top: 5px;
-        background-image: url(/images/my_logo--black.png);
+        background-image: url(../images/my_logo--black.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -468,13 +468,13 @@ footer{
         width: 6.5rem;
         display: block;
         justify-content: center;
-        background-image: url(/images/icons/menu-alt-right-regular-24.png);
+        background-image: url(../images/icons/menu-alt-right-regular-24.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
     .ham__menu--icon{
-        background-image: url(/images/icons/menu-alt-right-regular-24.png);
+        background-image: url(../images/icons/menu-alt-right-regular-24.png);
         color: var(--color-btns-nav);
         width: 4.5rem;
     }
@@ -491,7 +491,7 @@ footer{
         justify-content: center;
         width: 3.5rem;
         height: 3.5rem;
-        background-image: url(/images/icons/bx-x.svg);
+        background-image: url(../images/icons/bx-x.svg);
         background-size: cover;
         background-repeat: no-repeat;
     }
