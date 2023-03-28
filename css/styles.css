@@ -322,6 +322,7 @@ section.sub-container{
     align-items: center;
 }
 
+
 .carousel-arrow{
 
 }
@@ -332,7 +333,7 @@ section.sub-container{
 }
 
 .single__project{
-    width: 450px;
+    width: 300px;
 }
 
 .single__project-img{
@@ -727,6 +728,10 @@ footer{
         width: 70%;
         height: 70%;
         object-fit: fill;
+    }
+
+    .portafolio{
+        padding: 50px;
     }
 
 }
