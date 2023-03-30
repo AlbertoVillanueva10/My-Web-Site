@@ -242,11 +242,12 @@ section.sub-container{
 }
 
 .about-me--img{
-    background-image: url(../images/my_picture.JPG);
+    background-image: url(../images/my_picture.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 50%;
+    border-top-right-radius: 40%;
+    border-bottom-left-radius: 40%;
 }
 
 .about-me--text{
@@ -320,6 +321,7 @@ section.sub-container{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 
@@ -334,7 +336,14 @@ section.sub-container{
 
 .single__project{
     width: 300px;
+    text-decoration: none;
 }
+
+/* .single__project:hover{
+    width: 320px;
+    text-decoration: none;
+    transition: .2s;
+} */
 
 .single__project-img{
     background-position: center;
@@ -342,12 +351,23 @@ section.sub-container{
     background-repeat: no-repeat;
     width: 100%;
     height: 250px;
+    padding: 20px;
+    /* border: 1px solid var(--color-btns-nav); */
 
+}
+
+.single__project-img:hover{
+    width: 300px;
+    height: 250px;
+    border: none;
+    transition: .9s;
+    background-color: var(--color-footer-container);
 }
 
 .single__project-subtitle{
     text-align: center;
     color: var(--color-btns-nav);
+    
 }
 
 footer{
@@ -592,7 +612,7 @@ footer{
         min-height: 250px;
         margin-bottom: 2.5rem;
         /* display: inline-block;  */
-        background-color: blue;
+        /* background-color: blue; */
     }
     .about-me--text{
         padding: 0;
