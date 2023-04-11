@@ -357,11 +357,12 @@ section.sub-container{
 }
 
 .single__project-img:hover{
-    width: 300px;
+    /* width: 300px; */
     height: 250px;
     border: none;
-    transition: .9s;
+    transition: .5s;
     background-color: var(--color-footer-container);
+    opacity: .8;
 }
 
 .single__project-subtitle{
@@ -477,6 +478,8 @@ footer{
         background-size: cover;
         width: 120px;
         height: 160px;
+        transition: all .5s ease;
+        transform: translateX(0%);
     }
 
     #hamMenuID{
@@ -493,6 +496,8 @@ footer{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        transition: all .5s ease;
+        transform: translateX(0%);
     }
     .ham__menu--icon{
         background-image: url(../images/icons/menu-alt-right-regular-24.png);
@@ -515,6 +520,8 @@ footer{
         background-image: url(../images/icons/bx-x.svg);
         background-size: cover;
         background-repeat: no-repeat;
+        transition: all .5s ease;
+        transform: translateX(0%);
     }
 
     .menu__x--icon{
@@ -570,6 +577,7 @@ footer{
         height: 100%;
         clip-path:polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
         background-color: #cac7bca8;
+        transition: all .9s ease;
     }
 
     .menu-open__link{
@@ -641,6 +649,22 @@ footer{
         /* object-fit: fill; */
     }
 
+    .portafolio{
+        padding: 50px 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .single__project-img{
+        display: flex;
+        justify-content: center;
+        padding: 25px;
+    }
+
+    .single__project-subtitle{
+
+    }
+
 }
 
 /* Tablet */
@@ -693,8 +717,17 @@ footer{
     }
 
     .portafolio{
-        
+        padding: 50px 0px;
+        display: flex;
+        flex-wrap: wrap;
     }
+
+    .single__project-img{
+        display: flex;
+        justify-content: center;
+        padding: 25px;
+    }
+
     .subtitle{
         margin: 20px;
     }
@@ -751,7 +784,19 @@ footer{
     }
 
     .portafolio{
-        padding: 50px;
+        padding: 50px 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .single__project-img{
+        display: flex;
+        justify-content: center;
+        padding: 25px;
+    }
+
+    .single-project__section{
+
     }
 
 }
